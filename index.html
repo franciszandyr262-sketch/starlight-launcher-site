@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10091d">
+  <meta name="description" content="STARLIGHT — a star-powered Minecraft Java launcher project.">
+  <title>STARLIGHT — Minecraft Launcher</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0712;--panel:#151020;--panel2:#1c142b;--purple:#a855f7;--pink:#e879f9;--text:#f8f4ff;--muted:#b8accb;--line:#352448}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 70% 0%,#32104d 0,transparent 42%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid #ffffff12}.brand{display:flex;gap:11px;align-items:center;font-weight:900;letter-spacing:.13em}.star{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--purple),#6d28d9);box-shadow:0 0 28px #a855f755;font-size:23px}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}.navlinks a:hover{color:white}
+    .hero{padding:90px 0 76px;display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}.eyebrow{color:#d8b4fe;font-weight:800;font-size:12px;letter-spacing:.22em;text-transform:uppercase}.hero h1{font-size:clamp(44px,7vw,78px);line-height:1.02;letter-spacing:-.055em;margin:16px 0}.hero h1 span{background:linear-gradient(90deg,#c084fc,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;max-width:590px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:800;font-size:14px;transition:.2s}.btn.primary{background:linear-gradient(135deg,#9333ea,#6d28d9);border-color:#b66bf8;box-shadow:0 8px 30px #7e22ce33}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn.secondary{background:#ffffff08}
+    .preview{border:1px solid #b36aff45;background:linear-gradient(145deg,#20132f,#100b19);border-radius:24px;padding:18px;box-shadow:0 25px 80px #0008;transform:rotate(1deg)}.windowbar{display:flex;gap:6px;padding:2px 0 16px}.dot{width:8px;height:8px;border-radius:50%;background:#a855f7}.dot:nth-child(2){background:#e879f9}.dot:nth-child(3){background:#6d28d9}.mock{display:grid;grid-template-columns:85px 1fr;min-height:275px;border:1px solid #ffffff12;border-radius:15px;overflow:hidden}.side{background:#0d0914;padding:14px 8px}.side strong{font-size:10px;letter-spacing:.1em;color:#d8b4fe;display:block;margin:0 0 18px}.side span{display:block;padding:8px 6px;font-size:10px;color:#a99ab9;border-radius:7px;margin:4px 0}.side span:first-of-type{background:#7e22ce44;color:white}.screen{padding:19px;background:radial-gradient(ellipse at 70% 0%,#50207855,transparent 60%)}.screen small{color:#d8b4fe;letter-spacing:.15em}.screen h3{font-size:23px;margin:6px 0}.screen p{font-size:11px;color:var(--muted)}.play{margin-top:27px;padding:11px;background:linear-gradient(90deg,#9333ea,#6d28d9);border-radius:8px;text-align:center;font-size:12px;font-weight:900}
+    section{padding:56px 0}.sectionhead{text-align:center;max-width:650px;margin:0 auto 30px}.sectionhead h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.04em;margin:8px 0}.sectionhead p{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#1a1226,#100b18)}.ico{font-size:24px}.card h3{margin:12px 0 5px}.card p{color:var(--muted);font-size:14px;margin:0}.notice{border:1px solid #7e22ce66;background:#7e22ce15;border-radius:16px;padding:19px 22px;color:#e9d5ff}.notice strong{display:block;margin-bottom:4px}.notice p{margin:0;color:#c4b5d7;font-size:14px}.links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.footer{border-top:1px solid #ffffff12;padding:25px 0;color:#9586a9;font-size:12px}.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:55px 0}.preview{max-width:520px;width:100%;margin:auto}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}.cards{grid-template-columns:1fr}.hero p{font-size:16px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#top"><span class="star">✦</span><span>STARLIGHT</span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#features">Features</a><a href="#community">Community</a><a href="#download">Download</a></nav>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">✦ Your next Minecraft setup</div>
+        <h1>Play your way.<br><span>Shine brighter.</span></h1>
+        <p>Meet STARLIGHT, a community-focused launcher project for Minecraft Java Edition, designed around a clean interface, useful settings, and your own style.</p>
+        <div class="actions"><a class="btn primary" href="#download">★ Get STARLIGHT</a><a class="btn secondary" href="#features">Explore features ↓</a></div>
+      </div>
+      <div class="preview" aria-label="Illustration of the STARLIGHT launcher interface">
+        <div class="windowbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+        <div class="mock"><aside class="side"><strong>✦ STARLIGHT</strong><span>▶ Play</span><span>▦ Versions</span><span>✧ Mods</span><span>◈ Skins</span><span>⚙ Settings</span></aside><div class="screen"><small>WELCOME BACK</small><h3>Ready to launch?</h3><p>Your worlds are waiting among the stars.</p><div class="play">▶  LAUNCH MINECRAFT</div></div></div>
+      </div>
+    </div>
+    <section id="features"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Made for your setup</div><h2>Everything in one place</h2><p>A simple home for the launcher features being built for STARLIGHT.</p></div>
+      <div class="cards">
+        <article class="card"><div class="ico">🚀</div><h3>Launch & versions</h3><p>A streamlined launcher experience with room for version selection and launch settings.</p></article>
+        <article class="card"><div class="ico">🧩</div><h3>Mods & packs</h3><p>A planned home for managing mods and resource packs, with links to trusted community catalogs.</p></article>
+        <article class="card"><div class="ico">🌌</div><h3>Your style</h3><p>Purple starfield visuals, a modern sidebar, and a dedicated place for skins and personalization.</p></article>
+        <article class="card"><div class="ico">⚙️</div><h3>Settings</h3><p>Space for preferences such as memory allocation and other launcher options.</p></article>
+        <article class="card"><div class="ico">🔐</div><h3>Account-aware</h3><p>Account features should use secure, official sign-in flows. Never share passwords with anyone.</p></article>
+        <article class="card"><div class="ico">💜</div><h3>Community first</h3><p>Find community updates and helpful links as the project grows.</p></article>
+      </div>
+    </div></section>
+    <section id="download"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Get started</div><h2>STARLIGHT is coming into focus</h2><p>This website is the project's home. The installer link will be added once a public, verified download is ready.</p></div><div class="notice"><strong>Download status: not published yet</strong><p>We haven't attached a verified public Windows installer to this site yet. Check back soon, and only download builds from the official project links.</p></div><div class="links" style="margin-top:22px"><a class="btn secondary" href="https://modrinth.com/" target="_blank" rel="noopener noreferrer">Browse Modrinth ↗</a><a class="btn secondary" href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener noreferrer">Browse CurseForge ↗</a><a class="btn secondary" href="https://github.com/franciszandyr262-sketch/starlight-launcher-site" target="_blank" rel="noopener noreferrer">Website source ↗</a></div></div></section>
+    <section id="community"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Join the community</div><h2>Stay in the loop</h2><p>Follow the project as the launcher and its website continue to develop.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://discord.gg/CbVM3c2Mu" target="_blank" rel="noopener noreferrer">Join STARLIGHT Discord ↗</a></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><span>✦ STARLIGHT</span><span>Independent community project. Not affiliated with Mojang or Microsoft.</span><span>© 2026 STARLIGHT</span></div></footer>
+</body>
+</html>
