@@ -27,7 +27,7 @@
         <div class="eyebrow">✦ Your next Minecraft setup</div>
         <h1>Play your way.<br><span>Shine brighter.</span></h1>
         <p>Meet STARLIGHT, a community-focused launcher project for Minecraft Java Edition, designed around a clean interface, useful settings, and your own style.</p>
-        <div class="actions"><a class="btn primary" href="#download">★ Get STARLIGHT</a><a class="btn secondary" href="#features">Explore features ↓</a></div>
+        <div class="actions"><a class="btn primary" href="#download">★ Get STARLIGHT</a><a class="btn secondary" href="#features">Explore features ↓</a><button class="btn secondary" type="button" id="copy-site-top">↗ Share website</button></div>
       </div>
       <div class="preview" aria-label="Illustration of the STARLIGHT launcher interface">
         <div class="windowbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
@@ -44,9 +44,30 @@
         <article class="card"><div class="ico">💜</div><h3>Community first</h3><p>Find community updates and helpful links as the project grows.</p></article>
       </div>
     </div></section>
-    <section id="download"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Get started</div><h2>STARLIGHT is coming into focus</h2><p>This website is the project's home. The installer link will be added once a public, verified download is ready.</p></div><div class="notice"><strong>Download status: not published yet</strong><p>We haven't attached a verified public Windows installer to this site yet. Check back soon, and only download builds from the official project links.</p></div><div class="links" style="margin-top:22px"><a class="btn secondary" href="https://modrinth.com/" target="_blank" rel="noopener noreferrer">Browse Modrinth ↗</a><a class="btn secondary" href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener noreferrer">Browse CurseForge ↗</a><a class="btn secondary" href="https://github.com/franciszandyr262-sketch/starlight-launcher-site" target="_blank" rel="noopener noreferrer">Website source ↗</a></div></div></section>
-    <section id="community"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Join the community</div><h2>Stay in the loop</h2><p>Follow the project as the launcher and its website continue to develop.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://discord.gg/CbVM3c2Mu" target="_blank" rel="noopener noreferrer">Join STARLIGHT Discord ↗</a></div></div></div></section>
+    <section id="download"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Get started</div><h2>Get STARLIGHT for Windows</h2><p>When a verified installer is published, you can get it from the official STARLIGHT GitHub Releases page. Share this website link with friends instead of uploading the installer to Discord.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://github.com/franciszandyr262-sketch/starlight-launcher-site/releases/latest" target="_blank" rel="noopener noreferrer">⬇ Windows download / Releases ↗</a><button class="btn secondary" type="button" id="copy-site-download">Copy website link</button></div></div><div class="notice"><strong>One final setup step: publish the installer</strong><p>The download button opens the official Releases page. To make the installer downloadable, create a GitHub Release and attach your Starlight Setup .exe file to it. The website itself is already shareable—send friends this page link and they won't need Discord Nitro.</p></div><div class="links" style="margin-top:22px"><a class="btn secondary" href="https://modrinth.com/" target="_blank" rel="noopener noreferrer">Browse Modrinth ↗</a><a class="btn secondary" href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener noreferrer">Browse CurseForge ↗</a><a class="btn secondary" href="https://github.com/franciszandyr262-sketch/starlight-launcher-site" target="_blank" rel="noopener noreferrer">Website source ↗</a></div></div></section>
+    <section id="community"><div class="wrap"><div class="sectionhead"><div class="eyebrow">Join the community</div><h2>Stay in the loop</h2><p>Follow the project as the launcher and its website continue to develop.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://discord.gg/CbVM3c2Mu" target="_blank" rel="noopener noreferrer">Join STARLIGHT Discord ↗</a><button class="btn secondary" type="button" id="copy-site-community">Copy website link</button></div></div></div></section>
   </main>
   <footer class="footer"><div class="wrap"><span>✦ STARLIGHT</span><span>Independent community project. Not affiliated with Mojang or Microsoft.</span><span>© 2026 STARLIGHT</span></div></footer>
+<script>
+  (function(){
+    const siteUrl = "https://franciszandyr262-sketch.github.io/starlight-launcher-site/";
+    function copySiteLink(button){
+      button.addEventListener("click", async function(){
+        const original = button.textContent;
+        try {
+          await navigator.clipboard.writeText(siteUrl);
+          button.textContent = "✓ Link copied!";
+        } catch (e) {
+          window.prompt("Copy your STARLIGHT website link:", siteUrl);
+        }
+        window.setTimeout(function(){ button.textContent = original; }, 2200);
+      });
+    }
+    ["copy-site-top","copy-site-download","copy-site-community"].forEach(function(id){
+      const button = document.getElementById(id);
+      if(button) copySiteLink(button);
+    });
+  })();
+</script>
 </body>
 </html>
